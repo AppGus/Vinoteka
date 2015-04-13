@@ -44,7 +44,7 @@ app.post('/wines/:id', function(req, res) {
     res.json(wines);
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 5000)
 
 console.log('Express listening on port 8080');
 
