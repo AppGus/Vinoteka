@@ -1,0 +1,36 @@
+<div class="container-fluid">
+<div class="col-md-4 col-md-offset-4"><h2>Filipova vína</h2>
+    <input type="text" class="form-control" ng-model="wineFilter" placeholder=" Hledej ... "/>
+    <br/><br/>
+  </div>   
+</div>    
+<table class="table table-striped">
+    <tr>
+		<th ng-click="doSort('winery')"><span class="glyphicon glyphicon-sort"></span><strong> Vinařství</strong></th>
+		<th ng-click="doSort('grape')"><span class="glyphicon glyphicon-sort"></span><strong> Odrůda</strong></th>
+		<th ng-click="doSort('country')"><span class="glyphicon glyphicon-sort"></span><strong> Země</strong></th>
+		<th ng-click="doSort('year')"><span class="glyphicon glyphicon-sort"></span><strong> Ročník</strong></th>
+        <th ng-click="doSort('color')"><span class="glyphicon glyphicon-sort"></span><strong> Barva</strong></th>
+        <th ng-click="doSort('attribute')"><span class="glyphicon glyphicon-sort"></span><strong> Přívlastek</strong></th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+
+	</tr>
+	<tr ng-repeat="wine in wines | filter:wineFilter | orderBy:sortBy:reverse">
+		<td>{{ wine.winery | uppercase }}</td>
+		<td>{{ wine.grape }}</td>
+		<td>{{ wine.country }}</td>
+		<td>{{ wine.year }}</td>
+        <td>{{ wine.color }}</td>
+        <td>{{ wine.attribute }}</td>
+        <td><a href="#/details/{{ wine.id }}">Podrobnosti</a></td>
+        <td><span class="glyphicon glyphicon-remove delete" ng-click="deleteWine(wine.id)"></span></td>
+	</tr>  
+</table>
+<div class="container-fluid">
+    <div class="col-xs-1" ng-click="openDefault()"><span class="glyphicon glyphicon-plus"></span></div>
+    <div class="col-xs-11"><p class="text-right">Vín celkem <span class="badge">{{ wines.length}}</p></div>   
+    </div>  
+
+       
+</div>

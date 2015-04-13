@@ -1,0 +1,44 @@
+<div class="ngdialog-message">
+
+    <table class="table">
+        <h2>Přidat víno</h2>
+    <tr>
+        <td>Vinařství: </td>
+        <td><input type="text" ng-model="newWine.winery" /></td>
+    </tr>
+    <tr>
+        <td>Odrůda: </td>
+        <td><input type="text" ng-model="newWine.grape" /></td>
+    </tr>
+    <tr>
+        <td>Země: </td>
+        <td><input type="text" ng-model="newWine.country" /></td>
+    </tr>
+    <tr>
+    <td>Ročník: </td>
+        <td><input type="number" ng-model="newWine.year" /></td>
+    </tr>
+    <tr>
+        <td>Barva: </td>
+        <td><input type="text" ng-model="newWine.color" /></td>
+    </tr>
+    <tr>
+        <td>Přívlastek: </td>
+        <td><input type="text" ng-model="newWine.attribute" /></td>
+    </tr>
+    <tr>
+        <td>Apelace: </td>
+        <td><input type="text" ng-model="newWine.appellation" /></td>
+    </tr>
+    <tr>
+        <td>Cena: </td>
+        <td><input type="number" ng-model="newWine.price" /></td>
+    </tr>
+    </table>
+</div>
+
+<div class="ngdialog-buttons">
+    <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog()">Cancel</button>
+    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="addWine(newWine); closeThisDialog();">Uložit</button>
+</div>
+

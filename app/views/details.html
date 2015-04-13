@@ -1,0 +1,34 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">   
+            <h2>{{ wine.winery }} - {{ wine.grape }}</h2><br/>
+        </div>
+    </div>
+    <div class="row">    
+        <div class="col-md-4 col-md-offset-2">
+
+            <ul class="list-group">
+                <li class="list-group-item">Vinařství: {{ wine.winery }}</li>
+                <li class="list-group-item">Odrůda: {{ wine.grape }}</li>
+                <li class="list-group-item">Ročník: {{ wine.year }}</li>
+                <li class="list-group-item">Země: {{ wine.country }}</li>
+                <li class="list-group-item">Barva: {{ wine.color }}</li>
+                <li class="list-group-item">Přívlastek: {{ wine.attribute }}</li>
+                <li class="list-group-item">Apelace: {{ wine.appellation }}</li>
+                <li class="list-group-item">Cena: {{ wine.price | currency: "CZK " }}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item"><img position="center"width="306" height="306" src="http://cdns2.freepik.com/free-photo/wine-glass-vector_644420.jpg" alt="PlaceHolder"></img></li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+    
